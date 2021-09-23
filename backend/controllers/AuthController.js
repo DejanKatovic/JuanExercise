@@ -26,8 +26,6 @@ exports.register = async (req, res) => {
     encryptedPassword
   });
 
-  console.log(users);
-
   const token = generateToken(name);
 
   return res.status(201).json({
@@ -42,7 +40,6 @@ exports.login = async (req, res) => {
   const { users } = req; 
 
   const user = users.find(user => user.email === email);
-  console.log(user);
 
   if (user && (await bcrypt.compare(password, user.encryptedPassword))) {
     console.log(users);

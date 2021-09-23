@@ -3,6 +3,7 @@ import { SnackBarProvider } from './context/useSnackbarContext';
 import { AuthProvider } from './context/useAuthContext';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
+import Dashboard from './pages/Dashboard/Dashboard';
 import './App.css';
 
 function App() {
@@ -13,10 +14,7 @@ function App() {
           <Switch>
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            {/* <Route exact path="/dashboard">
-              <Dashboard />
-            </Route>
-            <Route exact path="/profile" component={ProfileSetting} /> */}
+            <Route exact path="/dashboard" component={Dashboard} />
             <Route path="*">
               <Redirect to="/login" />
             </Route>

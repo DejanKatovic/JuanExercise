@@ -14,7 +14,6 @@ export const AuthProvider = ({ children }) => {
 
   const updateLoginContext = useCallback(
     (data) => {
-      console.log(data);
       setLoggedInUser(data);
       history.push('/dashboard');
     },
