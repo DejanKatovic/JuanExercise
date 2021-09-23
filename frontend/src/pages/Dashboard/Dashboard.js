@@ -13,6 +13,7 @@ import { useHistory } from 'react-router-dom';
 import { useAuth } from '../../context/useAuthContext';
 import ConversionTemperature from './TabPanels/ConversionTemperature';
 import BMIPanel from './TabPanels/BMIPanel';
+import PurchasePrice from './TabPanels/PurchasePrice';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -72,6 +73,7 @@ export default function Dashboard() {
           >
             <Tab label="Conversion between Celsius and Fahrenheit" {...a11yProps(0)} />
             <Tab label="BMI Calculation" {...a11yProps(1)} />
+            <Tab label="Purchase Price" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -81,6 +83,7 @@ export default function Dashboard() {
         >
           <ConversionTemperature value={value} index={0} />
           <BMIPanel value={value} index={1} />
+          <PurchasePrice value={value} index={2} />
         </SwipeableViews>
       </Paper>
     </Box>

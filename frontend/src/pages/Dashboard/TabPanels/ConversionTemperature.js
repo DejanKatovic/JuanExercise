@@ -50,7 +50,7 @@ export default function ConversionTemperature({ value, index }) {
     const floatNumber = parseFloat(input);
     if (floatNumber) {
       setInput(floatNumber);
-      setResult(conversion === "0" ? (floatNumber * 1.8 + 32) : ((floatNumber - 32) / 1.8));
+      setResult(conversion === "0" ? (floatNumber * 1.8 + 32) : ((floatNumber - 32) * 9 / 5));
     }
     else {
       setResult("Input correct number");
