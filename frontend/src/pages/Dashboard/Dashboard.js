@@ -12,6 +12,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { useHistory } from 'react-router-dom';
 import { useAuth } from '../../context/useAuthContext';
 import ConversionTemperature from './TabPanels/ConversionTemperature';
+import BMIPanel from './TabPanels/BMIPanel';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,7 +70,8 @@ export default function Dashboard() {
             variant="fullWidth"
             aria-label="Exercises"
           >
-            <Tab label="Conversion Celsius to Fahrenheit" {...a11yProps(0)} />
+            <Tab label="Conversion between Celsius and Fahrenheit" {...a11yProps(0)} />
+            <Tab label="BMI Calculation" {...a11yProps(1)} />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -78,6 +80,7 @@ export default function Dashboard() {
           className={classes.swipe}
         >
           <ConversionTemperature value={value} index={0} />
+          <BMIPanel value={value} index={1} />
         </SwipeableViews>
       </Paper>
     </Box>

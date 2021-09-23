@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
   },
   element: {
     margin: theme.spacing(1),
+  },
+  subtitle: {
+    fontWeight: 'bold',
+    margin: theme.spacing(1),
   }
 }));
 
@@ -68,7 +72,7 @@ export default function ConversionTemperature({ value, index }) {
           </Typography>
           <Grid container>
             <Grid item sm={12} md={6} container direction="column" alignItems="center">
-              <Typography component="h4" className={classes.element}>Conversion Formulas:</Typography>
+              <Typography component="h4" className={classes.subtitle}>Conversion Formulas:</Typography>
               <Typography className={classes.element}>F(Fahrenheit) = C x 1.8 + 32</Typography>
               <Typography className={classes.element}>C(Celsius) = 5 * (F - 32) / 9</Typography>
             </Grid>
